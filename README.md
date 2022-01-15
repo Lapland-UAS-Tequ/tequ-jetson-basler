@@ -7,7 +7,7 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 # tequ-jetson-basler
 Install and configure Basler pylon components for Computer Vision to NVIDIA Jetson Xavier NX / Nano board.
 
-## Download Basler Pylon Package for ARM64
+## Install Basler Pylon Package for ARM64
 
 ```
 cd $home
