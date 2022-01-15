@@ -48,11 +48,52 @@ sudo /opt/pylon/share/pylon/setup-usb.sh
 
 Answer yes to both question.
 
+## Test your setup
+
+- Open Pylonviewer on Ubuntu desktop from /opt/pylon/bin/pylonviewer
+
+- Connect your camera cables and power it up
+
+- Search your camera from devices list
+
+- Check that you can see video
+
+- Configure camera for your needs 
+
+- Save settings to file => Select Tools -> Save Features
+
+## Install Pypylon for Python programming
+
+```
+git clone https://github.com/basler/pypylon
+```
+
+```
+cd pypylon
+```
+
+```
+sudo apt-get install swig
+```
+
+```
+pip3 install .
+```
+
+```
+cd /samples
+```
+
+```
+python3 save_image.py
+```
+
+5 images should appear to folder. Running this example might take a while if your camera is configured to grab large images.
 
 
+## Test that Pypylon library is working
 
 
 
 Sources:
-
 https://www.baslerweb.com/fp-1636374969/media/downloads/software/pylon_software/INSTALL~5.txt
