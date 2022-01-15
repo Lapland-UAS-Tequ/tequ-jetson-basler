@@ -62,7 +62,7 @@ Answer yes to both question.
 
 - Save settings to file => Select Tools -> Save Features
 
-## Install Pypylon for Python programming
+# Install Pypylon for Python programming
 
 ```
 git clone https://github.com/basler/pypylon
@@ -80,6 +80,8 @@ sudo apt-get install swig
 pip3 install .
 ```
 
+## Test that Pypylon library is working
+
 ```
 cd /samples
 ```
@@ -91,7 +93,6 @@ python3 save_image.py
 5 images should appear to folder. Running this example might take a while if your camera is configured to grab large images.
 
 
-## Test that Pypylon library is working
 
 
 
