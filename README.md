@@ -92,8 +92,57 @@ python3 save_image.py
 
 5 images should appear to folder. Running this example might take a while if your camera is configured to grab large images.
 
+Install Gstreamer support
 
+```
+apt-get install git cmake libgstreamer-plugins-base1.0-dev liborc-0.4-dev
+```
 
+```
+git clone https://github.com/joshdoe/gst-plugins-vision.git
+```
+
+```
+cd gst-plugins-vision
+```
+
+```
+sudo nano /cmake/modules/FindPylon.cmake
+```
+
+Replace "/opt/pylon5" => "/opt/pylon"
+
+```
+mkdir build
+```
+
+```
+cd build
+```
+
+```
+cmake -DCMAKE_INSTALL_PREFIX=/usr/lib/aarch64-linux-gnu ..
+```
+
+```
+make
+```
+
+```
+sudo make install
+```
+
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/pylon/lib
+```
+
+```
+gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! videoconvert ! autovideosink
+```
+
+More Gstremer examples:
+
+https://github.com/Lapland-UAS-Tequ/tequ-basler-gstreamer
 
 
 Sources:
