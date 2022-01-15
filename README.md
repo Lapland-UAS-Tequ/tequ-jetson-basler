@@ -134,11 +134,21 @@ sudo make install
 ```
 
 ```
+sudo nano ~/.bashrc
+```
+
+Add following line in the end of file:
+
+```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/pylon/lib
 ```
 
 ```
-gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! videoconvert ! autovideosink
+gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! videoconvert ! xvimagesink
+```
+
+```
+gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! xvimagesink
 ```
 
 More Gstremer examples:
