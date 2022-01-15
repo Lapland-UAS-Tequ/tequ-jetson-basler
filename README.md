@@ -7,7 +7,7 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 # tequ-jetson-basler
 Install and configure Basler pylon components for Computer Vision to NVIDIA Jetson Xavier NX / Nano board.
 
-## Install Basler Pylon Package for ARM64
+# Install Basler Pylon Package for ARM64
 
 ```
 cd $home
@@ -92,14 +92,15 @@ python3 save_image.py
 
 5 images should appear to folder. Running this example might take a while if your camera is configured to grab large images.
 
-Install Gstreamer support
+
+# Install Gstreamer plugin for Basler cameras
 
 ```
 apt-get install git cmake libgstreamer-plugins-base1.0-dev liborc-0.4-dev
 ```
 
 ```
-git clone https://github.com/joshdoe/gst-plugins-vision.git
+git clone https://github.com/Lapland-UAS-Tequ/gst-plugins-vision
 ```
 
 ```
@@ -146,4 +147,8 @@ https://github.com/Lapland-UAS-Tequ/tequ-basler-gstreamer
 
 
 Sources:
+
 https://www.baslerweb.com/fp-1636374969/media/downloads/software/pylon_software/INSTALL~5.txt
+
+https://github.com/joshdoe/gst-plugins-vision
+
