@@ -197,6 +197,10 @@ tar -xzf rtsp-simple-server_v0.17.13_linux_arm64v8.tar.gz
 ```
 
 ```
+sudo apt install gstreamer1.0-rtsp
+```
+
+```
 ./rtsp-simple-server
 ```
 
