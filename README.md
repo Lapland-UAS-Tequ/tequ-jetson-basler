@@ -169,6 +169,14 @@ gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! bayer2rgb ! queue ! nvv
 gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! nvvidconv ! nvjpegenc ! queue ! tcpclientsink port=55555
 ```
 
+```
+gst-launch-1.0 -v pylonsrc camera=0 config-file=/home/tequ/40122260.pfs  ! nvvidconv ! tee name=t t.! queue ! nvjpegenc ! queue ! tcpclientsink port=50001 t. ! queue ! omxh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/40122260
+```
+
+```
+gst-launch-1.0 -v pylonsrc camera=1 config-file=/home/tequ/23751808.pfs  ! nvvidconv ! tee name=t t.! queue ! nvjpegenc ! queue ! tcpclientsink port=50002 t. ! queue ! omxh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/23751808
+```
+
 
 More Gstremer examples:
 
