@@ -174,6 +174,32 @@ More Gstremer examples:
 
 https://github.com/Lapland-UAS-Tequ/tequ-basler-gstreamer
 
+# Install rtsp-simple-server for RTSP streaming
+
+```
+cd $home
+```
+
+```
+mkdir rtsp-simple-server
+```
+
+```
+cd rtsp-simple-server
+```
+
+```
+wget https://github.com/aler9/rtsp-simple-server/releases/download/v0.17.13/rtsp-simple-server_v0.17.13_linux_arm64v8.tar.gz
+```
+
+```
+tar -xzf rtsp-simple-server_v0.17.13_linux_arm64v8.tar.gz
+```
+
+```
+./rtsp-simple-server
+```
+
 
 Sources:
 
