@@ -134,13 +134,17 @@ sudo make install
 ```
 
 ```
-sudo nano ~/.bashrc
+sudo nano /etc/ld.so.conf.d/pylon.conf
 ```
 
-Add following line in the end of file:
+Add following path to the file:
 
 ```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/pylon/lib
+opt/pylon/lib
+```
+
+```
+sudo ldconfig
 ```
 
 ```
