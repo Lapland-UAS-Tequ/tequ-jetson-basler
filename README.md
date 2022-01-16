@@ -147,12 +147,18 @@ opt/pylon/lib
 sudo ldconfig
 ```
 
+Example pipelines, depending on camera settings
+
 ```
-gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! videoconvert ! xvimagesink
+gst-launch-1.0 pylonsrc ! queue ! nvvidconv ! xvimagesink
 ```
 
 ```
-gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! bayer2rgb ! queue ! videoconvert ! xvimagesink
+gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
+```
+
+```
+gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
 ```
 
 More Gstremer examples:
