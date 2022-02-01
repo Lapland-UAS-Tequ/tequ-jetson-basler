@@ -108,7 +108,7 @@ cd gst-plugins-vision
 ```
 
 ```
-sudo nano /cmake/modules/FindPylon.cmake
+sudo nano cmake/modules/FindPylon.cmake
 ```
 
 Replace "/opt/pylon5" => "/opt/pylon"
