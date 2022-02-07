@@ -28,7 +28,7 @@ tar -C ./pylon_setup -xzf ./pylon_*_setup.tar.gz
 ```
 
 ```
-cd /pylon_setup
+cd pylon_setup
 ```
 
 ```
@@ -52,6 +52,10 @@ Answer yes to both question.
 ## Test your setup
 
 - Open Pylonviewer on Ubuntu desktop from /opt/pylon/bin/pylonviewer
+
+```
+/opt/pylon/bin/pylonviewer
+```
 
 - Connect your camera cables and power it up
 
