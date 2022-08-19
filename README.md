@@ -105,6 +105,10 @@ python3 save_image.py
 # Install Gstreamer plugin for Basler cameras
 
 ```
+cd $home
+```
+
+```
 apt-get install git cmake libgstreamer-plugins-base1.0-dev liborc-0.4-dev
 ```
 
