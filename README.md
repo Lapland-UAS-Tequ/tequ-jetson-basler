@@ -70,6 +70,10 @@ Answer yes to both question.
 # Install Pypylon for Python programming
 
 ```
+cd $home
+```
+
+```
 git clone https://github.com/basler/pypylon
 ```
 
