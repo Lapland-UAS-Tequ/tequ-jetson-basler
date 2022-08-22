@@ -153,7 +153,7 @@ sudo nano /etc/ld.so.conf.d/pylon.conf
 Add following path to the file:
 
 ```
-opt/pylon/lib
+/opt/pylon/lib
 ```
 
 ```
