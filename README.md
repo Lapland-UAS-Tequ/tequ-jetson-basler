@@ -108,8 +108,10 @@ python3 save_image.py
 # Install Gstreamer plugin for Basler cameras
 
 *************************************************************************************************************
-** BASLER HAS RELEASED OFFICIAL GSTREAMER PLUG-IN 9th September 2022                                       **
-** https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/ **
+
+BASLER HAS RELEASED OFFICIAL GSTREAMER PLUG-IN 9th September 2022   
+https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/ 
+
 *************************************************************************************************************                                                           
 ```
 cd $home
