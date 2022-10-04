@@ -109,8 +109,9 @@ python3 save_image.py
 
 *************************************************************************************************************
 
-BASLER HAS RELEASED OFFICIAL GSTREAMER PLUG-IN 9th September 2022   
+Basler has released official GStreamer Plug-in at 9th September 2022   
 https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/ 
+https://github.com/basler/gst-plugin-pylon
 
 *************************************************************************************************************                                                           
 ```
