@@ -62,10 +62,83 @@ Or use terminal:
 - Save settings to file for later use with Gstreamer => Select Tools -> Save Features
 
 
+### 1.3 Install Basler Gstreamer plugin
 
+Instructions source: https://github.com/basler/gst-plugin-pylon
 
+```
+git clone https://github.com/basler/gst-plugin-pylon
+```
 
+```
+cd gst-plugin-pylon
+```
 
+```
+sudo apt remove meson ninja-build
+```
+
+```
+sudo -H python3 -m pip install meson ninja --upgrade
+```
+
+```
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev cmake
+```
+
+```
+export PYLON_ROOT=/opt/pylon
+```
+
+```
+meson builddir --prefix /usr/
+```
+
+```
+ninja -C builddir
+```
+
+```
+sudo ninja -C builddir install
+```
+
+```
+gst-inspect-1.0 pylonsrc
+```
+
+### 1.4 example pipelines
+
+```
+gst-launch-1.0 pylonsrc ! queue ! nvvidconv ! xvimagesink
+```
+
+```
+gst-launch-1.0 pylonsrc ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
+```
+
+```
+gst-launch-1.0 pylonsrc pfs-location=40257292.pfs device-serial-number="40257292"  ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
+```
+
+```
+gst-launch-1.0 pylonsrc pfs-location=40257292.pfs device-serial-number="40257292"  ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
+```
+
+```
+gst-launch-1.0 pylonsrc pfs-location=40257292.pfs device-serial-number="40257292"  ! queue ! nvvidconv ! nvjpegenc ! queue ! tcpclientsink port=55555
+```
+
+```
+gst-launch-1.0 -v pylonsrc pfs-location=40257292.pfs device-serial-number="40257292"   ! nvvidconv ! tee name=t t.! queue ! nvjpegenc ! queue ! tcpclientsink port=50001 t. ! queue ! omxh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/40122260
+```
+
+```
+gst-launch-1.0 -v pylonsrc pfs-location=40257292.pfs device-serial-number="40257292"  ! nvvidconv ! tee name=t t.! queue ! nvjpegenc ! queue ! tcpclientsink port=50002 t. ! queue ! omxh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/23751808
+```
+
+```
+gst-launch-1.0 pylonsrc pfs-location=40257292.pfs device-serial-number="40257292" ! queue ! bayer2rgb ! queue ! nvvidconv ! queue ! nvjpegenc ! tcpclientsink port=55555
+```
 
 -------------------------------------------------------------------------------------------------
 
