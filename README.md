@@ -12,6 +12,7 @@ Setup:
 - NVIDIA Jetson AGX Orin Developer Kit 
 - Jetpack 5.0.2
 - Basler daA3840-45uc USB3 camera
+- Pylon 7.2.0.25592
 
 ## 1. Install GStreamer to Jetson using official plugin
 
@@ -149,9 +150,14 @@ gst-launch-1.0 pylonsrc pfs-location=40257292.pfs device-serial-number="40257292
 
 ## 2. Install GStreamer to Jetson using gst-plugins-vision (unofficial plugin)
 
-Install and configure Basler pylon components for Computer Vision to NVIDIA Jetso board. 
+Install and configure Basler pylon components for Computer Vision to NVIDIA Jetson board. 
 
-This guide is written and tested using Pylon version 6.2.0.21487 in Jetson Nano with official Jetpack 4.6.1.
+Setup:
+- NVIDIA Jetson Nano
+- Jetpack 4.6.1
+- Basler daA3840-45uc USB3 camera
+- Pylon 6.2.0.21487
+
 
 ### 2.1 Install Basler Pylon Package for ARM64 
 
