@@ -6,15 +6,20 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 # tequ-jetson-basler
 
+# Install GStreamer to Jetson using official plugin
+
+## Install Basler Pylon Package for ARM64 
 
 
 
 
-# Install GStreamer to Jetson using gst-plugins-vision (not official plugin)
 
-Install and configure Basler pylon components for Computer Vision to NVIDIA Jetson Xavier NX / Nano board. 
 
-This guide is written using version Pylon version 6.2.0.21487 in Jetson Nano with official Jetpack 4.6.1.
+# Install GStreamer to Jetson using gst-plugins-vision (unofficial plugin)
+
+Install and configure Basler pylon components for Computer Vision to NVIDIA Jetso board. 
+
+This guide is written and tested using Pylon version 6.2.0.21487 in Jetson Nano with official Jetpack 4.6.1.
 
 ## Install Basler Pylon Package for ARM64 
 
@@ -76,7 +81,7 @@ Answer yes to both question.
 
 - Save settings to file => Select Tools -> Save Features
 
-# Install Pypylon for Python programming
+## Install Pypylon for Python programming
 
 ```
 cd $home
