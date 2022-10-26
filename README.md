@@ -6,14 +6,68 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 # tequ-jetson-basler
 
+This repository is updated 26th October to use official Basler Gstreamer plug-in to fetch data from Basler cameras. Follow track 1 to intsall and use official plugin and track 2 to install unofficial plugin. Unofficial plug-in guide is no longer updated.
+
 ## 1. Install GStreamer to Jetson using official plugin
 
 ### 1.1 Install Basler Pylon Package for ARM64 
 
+```
+cd $home
+```
+
+```
+mkdir basler
+```
+
+```
+cd basler
+```
+
+
+```
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_7.2.0.25592_aarch64_debs.tar.gz
+```
+
+```
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon-supplementary-package-for-mpeg-4_1.0.2.120-deb0_arm64.deb
+```
+
+```
+tar -xvf pylon_7.2.0.25592_aarch64_debs.tar.gz
+```
+
+```
+sudo apt-get install ./pylon_*.deb ./codemeter*.deb ./pylon-supplementary*.deb
+```
+
+### 1.2 Test your setup
+
+- Find and Open Pylon Viewer from applications
+
+Or use terminal:
+ 
+```
+/opt/pylon/bin/pylonviewer
+```
+
+- Connect your camera cables and power it up
+
+- Search your camera from devices list
+
+- Check that you can see video
+
+- Configure camera for your needs 
+
+- Save settings to file for later use with Gstreamer => Select Tools -> Save Features
 
 
 
 
+
+
+
+-------------------------------------------------------------------------------------------------
 
 ## 2. Install GStreamer to Jetson using gst-plugins-vision (unofficial plugin)
 
@@ -29,9 +83,7 @@ cd $home
 
 ```
 wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_6.2.0.21487_aarch64_setup.tar.gz
-
 ```
-
 
 ```
 mkdir ./pylon_setup
