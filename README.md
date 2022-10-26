@@ -6,22 +6,22 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 # tequ-jetson-basler
 
-# 1. Install GStreamer to Jetson using official plugin
+## 1. Install GStreamer to Jetson using official plugin
 
-## 1.1 Install Basler Pylon Package for ARM64 
-
-
+### 1.1 Install Basler Pylon Package for ARM64 
 
 
 
 
-# 2. Install GStreamer to Jetson using gst-plugins-vision (unofficial plugin)
+
+
+## 2. Install GStreamer to Jetson using gst-plugins-vision (unofficial plugin)
 
 Install and configure Basler pylon components for Computer Vision to NVIDIA Jetso board. 
 
 This guide is written and tested using Pylon version 6.2.0.21487 in Jetson Nano with official Jetpack 4.6.1.
 
-## 2.1 Install Basler Pylon Package for ARM64 
+### 2.1 Install Basler Pylon Package for ARM64 
 
 ```
 cd $home
@@ -63,7 +63,7 @@ sudo /opt/pylon/share/pylon/setup-usb.sh
 
 Answer yes to both question.
 
-## 2.2 Test your setup
+### 2.2 Test your setup
 
 - Open Pylonviewer on Ubuntu desktop from /opt/pylon/bin/pylonviewer
 
@@ -81,7 +81,7 @@ Answer yes to both question.
 
 - Save settings to file => Select Tools -> Save Features
 
-## 2.3 Install Pypylon for Python programming
+### 2.3 Install Pypylon for Python programming
 
 ```
 cd $home
@@ -103,7 +103,7 @@ sudo apt-get install swig
 pip3 install .
 ```
 
-## 2.4 Test that Pypylon library is working
+### 2.4 Test that Pypylon library is working
 
 ```
 cd /samples
@@ -116,7 +116,7 @@ python3 save_image.py
 5 images should appear to folder. Running this example might take a while if your camera is configured to grab large images.
 
 
-## 2.5 Install unofficial Gstreamer plugin for Basler cameras
+### 2.5 Install unofficial Gstreamer plugin for Basler cameras
                                                
 ```
 cd $home
@@ -175,7 +175,7 @@ sudo ldconfig
 ```
 
 
-# 3. Example Gstreamer pipelines, depending on camera settings
+### 2.6 Example Gstreamer pipelines, depending on camera settings
 
 ```
 gst-launch-1.0 pylonsrc ! queue ! nvvidconv ! xvimagesink
@@ -209,7 +209,7 @@ More Gstremer examples:
 
 https://github.com/Lapland-UAS-Tequ/tequ-basler-gstreamer
 
-# Install rtsp-simple-server for RTSP streaming
+## Install rtsp-simple-server for RTSP streaming
 
 ```
 cd $home
