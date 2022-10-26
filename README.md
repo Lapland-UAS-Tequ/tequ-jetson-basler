@@ -5,12 +5,18 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 ---
 
 # tequ-jetson-basler
-Install and configure Basler pylon components for Computer Vision to NVIDIA Jetson Xavier NX / Nano board.
+
+
+
+
+
+# Install GStreamer to Jetson using gst-plugins-vision (not official plugin)
+
+Install and configure Basler pylon components for Computer Vision to NVIDIA Jetson Xavier NX / Nano board. 
 
 This guide is written using version Pylon version 6.2.0.21487 in Jetson Nano with official Jetpack 4.6.1.
 
-
-# Install Basler Pylon Package for ARM64 
+## Install Basler Pylon Package for ARM64 
 
 ```
 cd $home
@@ -105,15 +111,8 @@ python3 save_image.py
 5 images should appear to folder. Running this example might take a while if your camera is configured to grab large images.
 
 
-# Install Gstreamer plugin for Basler cameras
-
-*************************************************************************************************************
-
-Basler has released official GStreamer Plug-in at 9th September 2022   
-https://www.baslerweb.com/en/company/news-press/news/pylon-gstreamer-plug-in-for-basler-cameras/877440/ 
-https://github.com/basler/gst-plugin-pylon
-
-*************************************************************************************************************                                                           
+## Install Gstreamer plugin for Basler cameras
+                                               
 ```
 cd $home
 ```
@@ -170,7 +169,8 @@ Add following path to the file:
 sudo ldconfig
 ```
 
-Example pipelines, depending on camera settings
+
+# Example Gstreamer pipelines, depending on camera settings
 
 ```
 gst-launch-1.0 pylonsrc ! queue ! nvvidconv ! xvimagesink
@@ -199,7 +199,6 @@ gst-launch-1.0 -v pylonsrc camera=0 config-file=/home/tequ/40122260.pfs  ! nvvid
 ```
 gst-launch-1.0 -v pylonsrc camera=1 config-file=/home/tequ/23751808.pfs  ! nvvidconv ! tee name=t t.! queue ! nvjpegenc ! queue ! tcpclientsink port=50002 t. ! queue ! omxh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/23751808
 ```
-
 
 More Gstremer examples:
 
