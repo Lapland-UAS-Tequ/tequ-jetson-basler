@@ -376,9 +376,14 @@ sudo apt install gstreamer1.0-rtsp
 ```
 
 
-Sources:
+
+
+# Sources:
+
+https://github.com/basler/gst-plugin-pylon
+
+https://www.baslerweb.com/fp-1666012566/media/downloads/software/pylon_software/INSTALL~8.txt
 
 https://www.baslerweb.com/fp-1636374969/media/downloads/software/pylon_software/INSTALL~5.txt
 
 https://github.com/joshdoe/gst-plugins-vision
-
