@@ -375,8 +375,11 @@ sudo apt install gstreamer1.0-rtsp
 ./rtsp-simple-server
 ```
 
+# Next steps:
 
+Use Basler camera & Node-RED & Triton Inference Server to create computer vision system.
 
+https://github.com/Lapland-UAS-Tequ/tequ-jetson-basler-nodered
 
 # Sources:
 
