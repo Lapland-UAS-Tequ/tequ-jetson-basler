@@ -371,7 +371,7 @@ gst-launch-1.0 -v pylonsrc camera=0 config-file=/home/tequ/40122260.pfs  ! nvvid
 gst-launch-1.0 -v pylonsrc camera=1 config-file=/home/tequ/23751808.pfs  ! nvvidconv ! tee name=t t.! queue ! nvjpegenc ! queue ! tcpclientsink port=50002 t. ! queue ! omxh264enc ! queue ! rtspclientsink location=rtsp://localhost:8554/23751808
 ```
 
-More Gstremer examples:
+More Gstreamer examples:
 
 https://github.com/Lapland-UAS-Tequ/tequ-basler-gstreamer
 
