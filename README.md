@@ -73,6 +73,10 @@ Or use terminal:
 Instructions source: https://github.com/basler/gst-plugin-pylon
 
 ```
+cd $home
+```
+
+```
 git clone https://github.com/basler/gst-plugin-pylon
 ```
 
