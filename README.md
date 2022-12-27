@@ -88,16 +88,15 @@ cd gst-plugin-pylon
 sudo apt remove meson ninja-build
 ```
 
-Jetson Orin Jetpack 5:
+Steps for Jetson Orin (Jetpack 5):
 ```
 sudo -H python3 -m pip install meson ninja --upgrade
 ```
-
 ```
 sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev cmake
 ```
 
-Jetson Nano (Jetpack 4.6), this updates Python and Cmake and it takes a long time:
+Steps for Jetson Nano (Jetpack 4.6), this updates Python and Cmake and it takes a long time:
 ```
 sudo apt install python3.7-dev
 sudo rm /usr/bin/python3
@@ -115,6 +114,8 @@ hash -r
 pip3 install scikit-build
 pip3 install meson ninja
 ```
+
+Common steps continue from here:
 
 ```
 export PYLON_ROOT=/opt/pylon
