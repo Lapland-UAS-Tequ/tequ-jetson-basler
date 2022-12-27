@@ -111,8 +111,8 @@ make -j8
 sudo apt-get install checkinstall
 sudo checkinstall --pkgname=cmake --pkgversion="3.20-custom" --default
 hash -r
-pip3 install scikit-build
-pip3 install meson ninja
+sudo -H pip3 install scikit-build
+sudo -H pip3 install meson ninja
 ```
 
 Common steps continue from here:
