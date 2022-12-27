@@ -15,7 +15,7 @@ Tested setups:
 - Pylon 7.2.0.25592
 
 Notes:
-- Installation to Jetson Nano requires extra steps which takes ~1-2 hours extra time. 
+- Installing official Basler plug-in to Jetson Nano requires extra steps which takes ~1-2 hours extra time
 - Unofficial track is only tested with Jetson Nano with Jetpack 4.6.1 
 
 ## 1. Install official Basler plugin
