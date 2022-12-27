@@ -8,11 +8,15 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 This repository is updated 26th October to use official Basler Gstreamer plug-in to fetch data from Basler cameras. Follow track 1 to install and use official plugin and track 2 to install unofficial plugin. Unofficial plug-in guide is no longer updated.
 
-Setup:
-- NVIDIA Jetson AGX Orin Developer Kit 
-- Jetpack 5.0.2
+Tested setups:
+- NVIDIA Jetson AGX Orin Developer Kit, Jetpack 5.0.2
+- NVIDIA Jetson Nano, Jetpack 4.6
 - Basler daA3840-45uc USB3 camera
 - Pylon 7.2.0.25592
+
+Notes:
+- Installation to Jetson Nano requires extra steps which takes ~1-2 hours extra time. 
+- Unofficial track is only tested with Jetson Nano with Jetpack 4.6.1 
 
 ## 1. Install official Basler plugin
 
@@ -101,7 +105,6 @@ Steps for Jetson Nano (Jetpack 4.6), this updates Python and Cmake and it takes 
 sudo apt install python3.7-dev
 sudo rm /usr/bin/python3
 sudo ln -s /usr/bin/python3.7 /usr/bin/python3
-sudo apt-get install python3-setuptools
 cd $home
 wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
 tar -zvxf cmake-3.20.0.tar.gz
@@ -111,8 +114,10 @@ make -j8
 sudo apt-get install checkinstall
 sudo checkinstall --pkgname=cmake --pkgversion="3.20-custom" --default
 hash -r
+sudo -H pip3 install setuptools
 sudo -H pip3 install scikit-build
-sudo -H pip3 install meson ninja
+sudo -H pip3 install meson
+sudo -H pip3 install ninja
 ```
 
 Common steps continue from here:
