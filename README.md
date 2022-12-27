@@ -97,21 +97,24 @@ sudo -H python3 -m pip install meson ninja --upgrade
 sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev cmake
 ```
 
-Jetson Nano (Jetpack 4.6):
+Jetson Nano (Jetpack 4.6), this updates Python and Cmake and it takes a long time:
 ```
 sudo apt install python3.7-dev
 sudo rm /usr/bin/python3
 sudo ln -s /usr/bin/python3.7 /usr/bin/python3
 sudo apt-get install python3-setuptools
-```
-
-Install CMake 3.20:
-https://gist.github.com/bmegli/4049b7394f9cfa016c24ed67e5041930
-```
+cd $home
+wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
+tar -zvxf cmake-3.20.0.tar.gz
+cd cmake-3.20.0
+./bootstrap
+make -j8
+sudo apt-get install checkinstall
+sudo checkinstall --pkgname=cmake --pkgversion="3.20-custom" --default
+hash -r
 pip3 install scikit-build
 pip3 install meson ninja
 ```
-
 
 ```
 export PYLON_ROOT=/opt/pylon
@@ -411,3 +414,5 @@ https://www.baslerweb.com/fp-1666012566/media/downloads/software/pylon_software/
 https://www.baslerweb.com/fp-1636374969/media/downloads/software/pylon_software/INSTALL~5.txt
 
 https://github.com/joshdoe/gst-plugins-vision
+
+https://gist.github.com/bmegli/4049b7394f9cfa016c24ed67e5041930
