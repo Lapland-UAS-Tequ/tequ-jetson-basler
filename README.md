@@ -14,7 +14,7 @@ Setup:
 - Basler daA3840-45uc USB3 camera
 - Pylon 7.2.0.25592
 
-## 1. Install GStreamer to Jetson using official plugin
+## 1. Install official Basler plugin
 
 ### 1.1 Install Basler Pylon Package for ARM64 
 
@@ -152,7 +152,7 @@ gst-launch-1.0 pylonsrc pfs-location=40257292.pfs device-serial-number="40257292
 
 -------------------------------------------------------------------------------------------------
 
-## 2. Install GStreamer to Jetson using gst-plugins-vision (unofficial plugin)
+## 2. Install gst-plugins-vision (unofficial plugin)
 
 Install and configure Basler pylon components for Computer Vision to NVIDIA Jetson board. 
 
