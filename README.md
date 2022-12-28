@@ -11,6 +11,7 @@ This repository is updated 26th October to use official Basler Gstreamer plug-in
 Tested setups:
 - NVIDIA Jetson AGX Orin Developer Kit, Jetpack 5.0.2
 - NVIDIA Jetson Nano, Jetpack 4.6
+- Neousys NRU-120S (Jetson AGX Xavier, Jetpack 4.6.1)
 - Basler daA3840-45uc USB3 camera
 - Pylon 7.2.0.25592
 
@@ -100,7 +101,7 @@ sudo -H python3 -m pip install meson ninja --upgrade
 sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev cmake
 ```
 
-Steps for Jetson Nano (Jetpack 4.6), this updates Python and Cmake and it takes a long time:
+Steps for (Jetpack 4.6 / 4.6.1), this updates Python and Cmake and it takes a long time:
 ```
 sudo apt install python3.7-dev
 sudo rm /usr/bin/python3
