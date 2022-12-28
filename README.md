@@ -110,6 +110,7 @@ cd $home
 wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
 tar -zvxf cmake-3.20.0.tar.gz
 cd cmake-3.20.0
+sudo apt-get install libssl-dev 
 ./bootstrap
 make -j8
 sudo apt-get install checkinstall
