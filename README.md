@@ -103,9 +103,9 @@ sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev cmake
 
 Steps for (Jetpack 4.6.1), this updates Python and Cmake and it takes a long time:
 ```
-sudo apt install python3.7-dev
+sudo apt install python3.8-dev
 sudo rm /usr/bin/python3
-sudo ln -s /usr/bin/python3.7 /usr/bin/python3
+sudo ln -s /usr/bin/python3.8 /usr/bin/python3
 cd $home
 wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
 tar -zvxf cmake-3.20.0.tar.gz
@@ -116,9 +116,9 @@ make -j8
 sudo apt-get install checkinstall
 sudo checkinstall --pkgname=cmake --pkgversion="3.20-custom" --default
 hash -r
-sudo -H pip3 install setuptools
 sudo -H pip3 install scikit-build
 sudo -H pip3 install meson
+sudo -H pip3 install setuptools
 sudo -H pip3 install ninja
 ```
 
