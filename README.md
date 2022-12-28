@@ -93,12 +93,16 @@ cd gst-plugin-pylon
 sudo apt remove meson ninja-build
 ```
 
+```
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+```
+
 Steps for Jetson Orin (Jetpack 5):
 ```
 sudo -H python3 -m pip install meson ninja --upgrade
 ```
 ```
-sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev cmake
+sudo apt install  cmake
 ```
 
 Steps for (Jetpack 4.6.1), this updates Python and Cmake and it takes a long time:
