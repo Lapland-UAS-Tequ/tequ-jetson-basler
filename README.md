@@ -120,6 +120,8 @@ sudo -H pip3 install scikit-build
 sudo -H pip3 install meson
 sudo -H pip3 install setuptools
 sudo -H pip3 install ninja
+cd $home
+cd gst-plugin-pylon
 ```
 
 Common steps continue from here:
