@@ -68,7 +68,11 @@ Or use terminal:
 
 - Check that you can see video
 
-- Configure camera for your needs 
+- Configure cameras and their settings for your needs 
+ - Pylon IP configurator
+ - Configure Static IP addresses for PoE ports and cameras (Neousys NRU-120S)
+
+- Use Basler Bandwidth manager to optimize your GigE & USB cameras transmission settings
 
 - Save settings to file for later use with Gstreamer => Select Tools -> Save Features
 
@@ -251,7 +255,11 @@ Answer yes to both question.
 
 - Check that you can see video
 
-- Configure camera for your needs 
+- Configure cameras and their settings for your needs 
+ - Pylon IP configurator
+ - Configure Static IP addresses for PoE ports and cameras (Neousys NRU-120S)
+
+- Use Basler Bandwidth manager to optimize your GigE & USB cameras transmission settings
 
 - Save settings to file => Select Tools -> Save Features
 
@@ -418,6 +426,14 @@ sudo apt install gstreamer1.0-rtsp
 Use Basler camera & Node-RED & Triton Inference Server to create computer vision system.
 
 https://github.com/Lapland-UAS-Tequ/tequ-jetson-basler-nodered
+
+# Notes:
+
+If you see "dconf permission errors" on GStreamer pipelines, try 
+
+```sudo chmod -R a+rwx /home/nvidia/.cache```
+
+Where nvidia is your user name
 
 # Sources:
 
