@@ -132,7 +132,9 @@ cd $home
 cd gst-plugin-pylon
 ```
 
-Common steps continue from here:
+Common steps for both Jetpacks continue from here 
+
+You can also start from here if you are building again:
 
 ```
 export PYLON_ROOT=/opt/pylon
