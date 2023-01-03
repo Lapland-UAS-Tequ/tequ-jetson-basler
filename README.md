@@ -81,18 +81,7 @@ Or use terminal:
 
 Instructions source: https://github.com/basler/gst-plugin-pylon
 
-```
-cd $home
-```
-
-```
-git clone https://github.com/basler/gst-plugin-pylon
-```
-
-```
-cd gst-plugin-pylon
-```
-
+Steps for Jetson AGX Orin (Jetpack 5):
 ```
 sudo apt remove meson ninja-build
 ```
@@ -101,16 +90,18 @@ sudo apt remove meson ninja-build
 sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 ```
 
-Steps for Jetson Orin (Jetpack 5):
 ```
 sudo -H python3 -m pip install meson ninja --upgrade
 ```
+
 ```
 sudo apt install  cmake
 ```
 
 Steps for (Jetpack 4.6.1), this updates Python and Cmake and it takes a long time:
 ```
+sudo apt remove meson ninja-build
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 sudo apt install python3.8-dev
 sudo rm /usr/bin/python3
 sudo ln -s /usr/bin/python3.8 /usr/bin/python3
@@ -128,13 +119,23 @@ sudo -H pip3 install scikit-build
 sudo -H pip3 install meson
 sudo -H pip3 install setuptools
 sudo -H pip3 install ninja
-cd $home
-cd gst-plugin-pylon
 ```
 
 Common steps for both Jetpacks continue from here 
 
 You can also start from here if you are building again:
+
+```
+cd $home
+```
+
+```
+git clone https://github.com/basler/gst-plugin-pylon
+```
+
+```
+cd gst-plugin-pylon
+```
 
 ```
 export PYLON_ROOT=/opt/pylon
