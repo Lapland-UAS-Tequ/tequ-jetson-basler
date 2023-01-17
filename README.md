@@ -106,7 +106,7 @@ sudo apt install python3.8-dev
 sudo rm /usr/bin/python3
 sudo ln -s /usr/bin/python3.8 /usr/bin/python3
 cd $home
-wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/cmake-3.20.0.tar.gz
 tar -zvxf cmake-3.20.0.tar.gz
 cd cmake-3.20.0
 sudo apt-get install libssl-dev 
