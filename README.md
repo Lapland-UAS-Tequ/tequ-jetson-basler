@@ -13,7 +13,7 @@ Tested setups:
 - NVIDIA Jetson Nano, Jetpack 4.6.1
 - Neousys NRU-120S (Jetson AGX Xavier, Jetpack 4.6.1)
 - Basler daA3840-45uc USB3 camera
-- Pylon 7.2.0.25592
+- Pylon 7.2.1.25747
 
 Notes:
 - Installing official Basler plug-in to Jetson Nano requires extra steps which takes ~1-2 hours extra time
@@ -37,7 +37,7 @@ cd basler
 
 
 ```
-wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_7.2.0.25592_aarch64_debs.tar.gz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_7.2.1.25747_aarch64_debs.tar
 ```
 
 ```
@@ -45,7 +45,7 @@ wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon-supplem
 ```
 
 ```
-tar -xvf pylon_7.2.0.25592_aarch64_debs.tar.gz
+tar -xvf pylon_7.2.1.25747_aarch64_debs.tar
 ```
 
 ```
