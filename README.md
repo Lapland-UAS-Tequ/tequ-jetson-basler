@@ -37,7 +37,7 @@ cd basler
 
 
 ```
-wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_7.2.1.25747_aarch64_debs.tar
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_7.2.1.25747_aarch64_debs.tar.gz
 ```
 
 ```
@@ -45,7 +45,7 @@ wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon-supplem
 ```
 
 ```
-tar -xvf pylon_7.2.1.25747_aarch64_debs.tar
+tar -xvf pylon_7.2.1.25747_aarch64_debs.tar.gz
 ```
 
 ```
