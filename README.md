@@ -35,7 +35,6 @@ mkdir basler
 cd basler
 ```
 
-
 ```
 wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/pylon_7.2.1.25747_aarch64_debs.tar.gz
 ```
