@@ -375,10 +375,6 @@ gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! bayer2rgb ! queue ! nvv
 ```
 
 ```
-gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! bayer2rgb ! queue ! nvvidconv ! xvimagesink
-```
-
-```
 gst-launch-1.0 pylonsrc config-file=config.pfs ! queue ! nvvidconv ! nvjpegenc ! queue ! tcpclientsink port=55555
 ```
 
