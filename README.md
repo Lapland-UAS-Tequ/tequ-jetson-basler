@@ -6,12 +6,14 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 # tequ-jetson-basler
 
-This repository is updated 26th October to use official Basler Gstreamer plug-in to fetch data from Basler cameras. Follow track 1 to install and use official plugin and track 2 to install unofficial plugin. Unofficial plug-in guide is no longer updated.
+This repository is updated to use official Basler Gstreamer plug-in to fetch data from Basler cameras. Follow track 1 to install and use official plugin and track 2 to install unofficial plugin. Unofficial plug-in guide is no longer updated.
 
-Tested setups:
+Tested platforms:
 - NVIDIA Jetson AGX Orin Developer Kit, Jetpack 5.0.2
 - NVIDIA Jetson Nano, Jetpack 4.6.1
 - Neousys NRU-120S (Jetson AGX Xavier, Jetpack 4.6.1)
+
+Basler software & hardware used:
 - Basler daA3840-45uc USB3 camera
 - Pylon 7.2.1.25747
 
